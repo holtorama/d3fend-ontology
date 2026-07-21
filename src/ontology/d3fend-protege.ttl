@@ -46496,6 +46496,20 @@ NX stands for No eXecute and XD stands for eXecute Disable. Both are same and is
         "MITRE Analysis was not found",
         "No URL provided for reference" .
 
+:NetworkTrafficRateLimiting a owl:Class ;
+    :d3fend-id "D3-NTRL";
+    :definition
+        "A strategy for limiting network traffic to prevent denial of service attacks.";
+    :kb-article
+        """## How it Works
+
+Hardware or software can be configured to limit the number of sends or requests from a user, an IP address, or a network interface.""";
+    rdfs:label "Network Traffic Rate Limiting";
+    rdfs:subClassOf :NetworkTrafficFiltering ,
+        [ a owl:Restriction ;
+            owl:onProperty :restricts ;
+            owl:someValuesFrom :NetworkTraffic ] .
+
 :Reference-www.biometric-solutions.com_keystroke-dynamics a :InternetArticleReference,
         owl:NamedIndividual ;
     rdfs:label "Reference - http://www.biometric-solutions.com/keystroke-dynamics.html - biometric-solutions.com" ;
